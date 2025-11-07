@@ -1,0 +1,28 @@
+Pig Stack Trace
+---------------
+ERROR 1200: <file /lab/data/university_rankings/clean_all.pig, line 31, column 8>  Syntax error, unexpected symbol at or near '('
+
+org.apache.pig.impl.logicalLayer.FrontendException: ERROR 1000: Error during parsing. <file /lab/data/university_rankings/clean_all.pig, line 31, column 8>  Syntax error, unexpected symbol at or near '('
+	at org.apache.pig.PigServer$Graph.parseQuery(PigServer.java:1841)
+	at org.apache.pig.PigServer$Graph.access$000(PigServer.java:1536)
+	at org.apache.pig.PigServer.parseAndBuild(PigServer.java:461)
+	at org.apache.pig.PigServer.executeBatch(PigServer.java:486)
+	at org.apache.pig.PigServer.executeBatch(PigServer.java:472)
+	at org.apache.pig.tools.grunt.GruntParser.executeBatch(GruntParser.java:172)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:235)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:206)
+	at org.apache.pig.tools.grunt.Grunt.exec(Grunt.java:81)
+	at org.apache.pig.Main.run(Main.java:630)
+	at org.apache.pig.Main.main(Main.java:175)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:330)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:245)
+Caused by: Failed to parse: <file /lab/data/university_rankings/clean_all.pig, line 31, column 8>  Syntax error, unexpected symbol at or near '('
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:244)
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:182)
+	at org.apache.pig.PigServer$Graph.parseQuery(PigServer.java:1828)
+	... 16 more
+================================================================================
